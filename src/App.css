@@ -26,10 +26,10 @@ form{
 .input{
   background-color: rosybrown;
   width: 300px;
-  min-height: 300px;
+  min-height: 100px;
   
 }
-.content{
+.tasklist{
   background-color: blueviolet;
 }
 button{

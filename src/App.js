@@ -1,15 +1,10 @@
-
 import './App.css';
 import Form from './Components/Form';
+import React from 'react';
 
 function App() {
-  const addTask = task =>{
-    task.id = tasks.length + 1
-    setTasks([...tasks, task])
-  }
-
-
-  return (
+  
+return (
     <div className="App">
       <header className="App-header">
         <h1><b>TO-DO LIST</b></h1>
