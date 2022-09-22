@@ -1,19 +1,23 @@
 import React from "react";
 
 function Form(){
+    const [task, setTask] = useState("")
+
+    const onSubmit = e => {
+        e.preventDefault();
+
+    }
+
+    const onChange = (e) => {
+        setTask(e.target.value);
+      }
+
     return(
         <div className="input">
-            <form>
-                <label><b>Task 1:</b></label>
-                <input></input>
-                <label><b>Task 2:</b></label>
-                <input></input>
-                <label><b>Task 3:</b></label>
-                <input></input>
-                <label><b>Task 4:</b></label>
-                <input></input>
-                <label><b>Task 5:</b></label>
-                <input></input>
+            <form onSubmit={onSubmit}>
+                <label><b>Enter Task:</b></label>
+                <input value={task} onChange={onChange}></input>
+                <button type="submit"><b>ADD</b></button>
             </form>
         </div>
     )
