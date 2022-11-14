@@ -31,11 +31,16 @@ function Form() {
             <form onSubmit={onSubmit}>
                 <label><b>Enter Task:</b></label>
                 <input type = "text" value={task} onChange={onChange}></input>
-                <button type="submit"><b>ADD</b></button>
+                <button type="submit"><b>ADD TASK</b></button>
             </form>
             <section className="tasklist">
             <h2>Tasks to do today</h2>
+            
             {listOfTasks}
+            <button><b>EDIT TASK</b></button>
+            <button><b>DONE !</b></button>
+            
+            
             </section>
         </div>
     )
