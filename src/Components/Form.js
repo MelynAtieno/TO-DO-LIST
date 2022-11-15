@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import 'font-awesome/css/font-awesome.min.css';
+import { v4 as uuidv4 } from 'uuid';
 
 
 function Form() {
@@ -10,8 +12,8 @@ function Form() {
         const addTask = {
             task:task
         };
-        const taskList = [...submittedData, addTask];
-        setsubmittedData(taskList);
+        const taskList = [...submittedData,addTask];
+        setsubmittedData(taskList, {id:uuidv4(), title:task});
         setTask("");
     }
 
@@ -20,21 +22,26 @@ function Form() {
         setTask(e.target.value);
     }
 
+    const handleDelete = ({id})=>{
+        setTask(submittedData.filter((task) => task.id === id))
+    }
+
     const listOfTasks = submittedData.map((data, index) => {
         return (
             <div> 
                 <li className="list-item" key={index}>
-                <input value={data.task} />
+                <input className="list" onChange={(e)=> e.preventDefault()} value={data.task} />
                 <div>
                 <button className="done-task">
-                <i className='fa fa-edit'></i>
+                <i className='fa fa-check-square'></i>
+                
                 </button>
                 
                 <button className="edit-task">
                     <i className='fa fa-edit'></i>
                 </button>
 
-                <button className="delete-task">
+                <button className="delete-task" onClick={(id) => handleDelete(id)}>
                 <i className='fa fa-trash'></i>
                 </button>
                 </div>
