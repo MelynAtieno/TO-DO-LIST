@@ -7,7 +7,7 @@ function AddTask() {
             
             <input placeholder='What are you doing today?'></input>
 
-            <button className='btn-add'><b>ADD TASK</b></button>
+            <button className='btn-add' type='submit'><b>ADD TASK</b></button>
         </form>
     </div>
   )
