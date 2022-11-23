@@ -1,15 +1,15 @@
 import './App.css';
 
 import React from 'react';
-import PageTitle from './Components/PageTitle';
 import Header from './Components/Header';
+import AddTask from './Components/AddTask';
 
 function App() {
   
 return (
     <div className="app-container">
-      <PageTitle></PageTitle>
       <Header></Header>
+      <AddTask></AddTask>
     </div>
   );
 }

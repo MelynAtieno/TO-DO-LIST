@@ -1,13 +1,11 @@
 import React from 'react'
-import Button from './Button'
 
-function Header() {
+function PageTitle() {
   return (
     <div>
-        <h1><b>Hello</b></h1>
-        <Button></Button>
-    </div>
+      <h1 className='title'><b>TO-DO LIST</b></h1>
+      </div>
   )
 }
 
-export default Header
+export default PageTitle
