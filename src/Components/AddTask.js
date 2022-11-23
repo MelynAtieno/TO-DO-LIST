@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import {v4 as uuid} from 'uuid';
@@ -10,7 +9,8 @@ function AddTask() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log({id: uuid(),task})
-       
+        
+        setTask('');
     }
 
     const notify = ()=>{
