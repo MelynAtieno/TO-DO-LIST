@@ -1,21 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import {v4 as uuid} from 'uuid';
 
 
-function AddTask() {
-    const [task, setTask] = useState('');
+function AddTask({task, setTask, todos, setTodos}) {
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({id: uuid(),task})
+        setTodos([...todos,{id: uuid(),title:task}])
         
+        toast("Task added successfully!")
+
+
         setTask('');
     }
 
-    const notify = ()=>{
-        toast("Task added successfully!");
-    }
+    // const notify = (e)=>{
+    //     e.preventDefault();
+    //     toast("Task added successfully!");
+    // }
 
   return (
     <div className='form'>
@@ -32,7 +36,7 @@ function AddTask() {
              </input>
             
 
-            <button className='btn-add' type='submit' onClick={notify}><b>ADD TASK</b></button>
+            <button className='btn-add' type='submit'><b>ADD TASK</b></button>
         </form>
         <ToastContainer />
     </div>
