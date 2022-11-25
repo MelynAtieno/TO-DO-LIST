@@ -6,9 +6,9 @@ import {v4 as uuid} from 'uuid';
 
 function AddTask({task, setTask, todos, setTodos, editTask, setEditTask}) {
     
-    const updateTask = (title, id) =>{
+    const updateTask = (title, id, completed) =>{
       const newTask = todos.map((todo) => 
-        todo.id === id ? {title, id} : todo 
+        todo.id === id ? {title, id, completed} : todo 
       )
       setTodos(newTask);
       toast("Task updated successfully!")
@@ -28,11 +28,11 @@ function AddTask({task, setTask, todos, setTodos, editTask, setEditTask}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(!editTask){
-        setTodos([...todos,{id: uuid(),title:task}])
+        setTodos([...todos,{id: uuid(),title:task, completed: false}])
         toast("Task added successfully!")
         setTask('');
         } else {
-          updateTask(task, editTask.id)
+          updateTask(task, editTask.id, editTask.completed)
         }
     }
 

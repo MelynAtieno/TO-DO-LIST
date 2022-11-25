@@ -9,9 +9,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
-   const[task, setTask] = useState("")
-   const [todos, setTodos]= useState([])
-   const [editTask, setEditTask] = useState(null)
+  //const initialState = JSON.parse(localStorage.getItem("todos")) || [];
+   const[task, setTask] = useState("");
+   const [todos, setTodos]= useState([]);
+   const [editTask, setEditTask] = useState(null);
+
+ if(!localStorage.getItem("todos") || JSON.parse(localStorage.getItem("todos")).length === 0){
+  localStorage.setItem("todos", JSON.stringify(todos));
+ }
+   
 
 return (
     <div className="app-container">
