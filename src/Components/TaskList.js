@@ -1,5 +1,6 @@
 import React from 'react'
 //import TaskItem from './TaskItem';
+import { FaCheckCircle, FaEdit, FaTrashAlt } from 'react-icons/fa';
 
 
 function TaskList({todos, setTodos}) {
@@ -14,10 +15,16 @@ function TaskList({todos, setTodos}) {
                 <input type="text" className='list-item' value={todo.title} onChange={(e) => e.preventDefault()} >
                   
                 </input>
-                <div>
-                    <button className='btn-complete'></button>
-                    <button className='btn-edit'><i></i></button>
-                    <button className='btn-delete'><i></i></button>
+                <div className='icons'>
+                    <button className='btn-complete'>
+                    <FaCheckCircle />
+                    </button>
+                    <button className='btn-edit'>
+                      <FaEdit />
+                    </button>
+                    <button className='btn-delete'>
+                      <FaTrashAlt />
+                    </button>
                 </div>
             </ul>
         ))
