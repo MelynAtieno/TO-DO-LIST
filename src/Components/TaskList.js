@@ -37,17 +37,16 @@ function TaskList({todos, setTodos, setEditTask}) {
        {
         todos.map((todo) => (
             <ul className='todo-list' key={todo.id}>
-                <tag type="text" className={`list-item ${todo.completed ? "complete" : ""}`} value={todo.title} onChange={(e) => e.preventDefault()} >
+                <p type="text" className={`list-item ${todo.completed ? "complete" : ""}`}  onChange={(e) => e.preventDefault()} >
                   
-                </tag>
-                <div className='icons'>
-            
+                   {todo.title}
                     
                     <FaCheckCircle onClick={() => handleComplete(todo)} />
                     <FaEdit onClick={() => handleEdit(todo)} />                    
                     <FaTrashAlt onClick={() => handleDelete(todo)} />
                     
-                </div>
+                
+                </p>
             </ul>
         ))
        }

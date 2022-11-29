@@ -1,14 +1,11 @@
 import React from 'react'
+import "./Header.css"
 
 function PageTitle() {
   return (
     <div>
-      <h1 className='header'><b>Header</b></h1>
-      <select>
-        <option value="all">All Tasks</option>
-        <option value="Incomplete">Incomplete</option>
-        <option value="Complete">Complete</option>
-      </select>
+      <h1 className='header'><b>Plan your day !</b></h1>
+      
       </div>
   )
 }
