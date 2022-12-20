@@ -1,0 +1,33 @@
+.task-list{
+    float: right;
+    margin-right: 10%;
+    font-family: Georgia;
+    cursor: pointer;
+    
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    background: rgb(173, 171, 240);
+    margin-right: 10%;
+    font-family: Georgia;
+    margin-bottom: 20px;
+    padding: 0px 10px 0px 5px;
+    box-shadow:  5px 5px 10px #bbbbbb,
+             -5px -5px 10px #ffffff;;
+    width: 100%;  
+    border-radius: 10px;
+      
+}
+.todo-list:hover{
+    transform: scale(1.5) ;
+}
+.icons{
+    float: right;
+    
+    
+}
+
+
+

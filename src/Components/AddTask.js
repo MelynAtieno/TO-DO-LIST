@@ -1,4 +1,4 @@
-
+import "./AddTask.css"
 import React, {useEffect} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import {v4 as uuid} from 'uuid';
@@ -41,9 +41,9 @@ function AddTask({task, setTask, todos, setTodos, editTask, setEditTask}) {
         <form className='add-task' onSubmit={(e)=> handleSubmit(e)}>
             
             <input 
-            placeholder='What are you doing today?'
+            placeholder='What are you planning to do today?'
              type="text" 
-             id="task"
+             className="task-input"
              required  
              value={task}
              onChange={(e) => setTask(e.target.value)}>

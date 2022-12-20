@@ -1,4 +1,6 @@
 .title-div{
     text-align: center;
     font-family: "Brush Script MT";
+    position: sticky;
+    top: 0;
 }
